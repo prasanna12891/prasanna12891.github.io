@@ -1,0 +1,34 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+
+	  <title>Toxic</title>
+
+	  <link rel="stylesheet" href="style.css">
+
+	  <!--[if lt IE 9]>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	  <![endif]-->
+	</head>
+
+	<body>
+		<div id="div1">
+			Hello World!
+		</div>
+		<div id="messageWall" style="min-height: 200px; background-color: grey;">
+
+		</div>
+		<form id="messageForm" onsubmit="myFunction();">
+			<input type="text" name="chatMessage" id="chatMessage"><br><br>
+			<input type="submit" name="submitMessage">
+		</form>
+	  <script src="scripts.js"></script>
+	  <script>
+	  	function myFunction(){
+	document.getElementById('messageWall').innerHTML += document.getElementById('chatMessage').value;
+}
+	  </script>
+	</body>
+</html>
